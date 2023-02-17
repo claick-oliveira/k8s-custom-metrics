@@ -9,7 +9,7 @@ variable "subnet_name" {
   type        = string
 }
 
-variable "gcp_project_name" {
+variable "gcp_project_id" {
   description = "The GCP project ID"
   type = string
 }

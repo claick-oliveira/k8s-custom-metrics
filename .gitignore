@@ -162,3 +162,7 @@ override.tf.json
 # Ignore CLI configuration files
 .terraformrc
 terraform.rcl
+
+# manifests
+configconnector.yaml
+enable-pubsub.yaml
