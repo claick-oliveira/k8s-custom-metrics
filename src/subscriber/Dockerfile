@@ -1,4 +1,4 @@
-FROM alpine:3.10.3
+FROM alpine:3.17.2
 
 LABEL maintainer="Claick Oliveira" \
       version="0.1.0"
