@@ -15,9 +15,33 @@ spec:
       containers:
       - name: subscriber
         image: subscriber
+        env:
+        - name: GOOGLE_CLOUD_PROJECT
+          value: ""<PROJECT_ID>""
       serviceAccountName: pubsub-sa
       nodeSelector:
         iam.gke.io/gke-metadata-server-enabled: "true"
-      env:
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: publisher
+  namespace: custom-metrics
+spec:
+  selector:
+    matchLabels:
+      app: publisher
+  template:
+    metadata:
+      labels:
+        app: publisher
+    spec:
+      containers:
+      - name: publisher
+        image: publisher
+        env:
         - name: GOOGLE_CLOUD_PROJECT
-          value: "<PROJECT_ID>"
+          value: ""<PROJECT_ID>""
+      serviceAccountName: pubsub-sa
+      nodeSelector:
+        iam.gke.io/gke-metadata-server-enabled: "true"

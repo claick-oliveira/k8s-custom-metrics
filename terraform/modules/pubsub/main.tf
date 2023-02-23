@@ -8,6 +8,10 @@ resource "google_pubsub_subscription" "example" {
   name  = "example-subscription"
   topic = google_pubsub_topic.example.name
 
+  labels = {
+    subscription_id = "example-subscription"
+  }
+
   # 20 minutes
   message_retention_duration = "1200s"
   retain_acked_messages      = true
