@@ -5,7 +5,11 @@
 version: 2
 updates:
   - package-ecosystem: "docker"
-    directory: "/"
+    directory: "/src/publisher"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "docker"
+    directory: "/src/subcriber"
     schedule:
       interval: "weekly"
   - package-ecosystem: "pip"
@@ -13,6 +17,6 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "terraform"
-    directory: "/"
+    directory: "/terraform"
     schedule:
       interval: "weekly"
