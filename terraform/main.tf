@@ -47,3 +47,7 @@ module "artifactregistry" {
   repository_id = "custom-metrics"
   gcp_region    = var.gcp_region
 }
+
+module "pubsub" {
+  source = "./modules/pubsub"
+}

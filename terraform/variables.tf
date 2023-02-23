@@ -19,6 +19,7 @@ variable "gcp_service_list" {
   default = [
     "compute.googleapis.com",
     "container.googleapis.com",
-    "artifactregistry.googleapis.com"
+    "artifactregistry.googleapis.com",
+    "pubsub.googleapis.com"
   ]
 }

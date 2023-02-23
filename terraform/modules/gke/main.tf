@@ -60,7 +60,7 @@ module "gke" {
   create_service_account     = false
   release_channel            = "REGULAR"
   remove_default_node_pool   = true
-
+  node_metadata              = "GKE_METADATA"
 
   node_pools = [
     {
@@ -81,7 +81,7 @@ module "gke" {
       preemptible             = false
       initial_node_count      = 1
       service_account         = google_service_account.gke-sa.email
-      config_connector_config = true
+      config_connector_config = false
     },
   ]
 
