@@ -46,8 +46,6 @@ First of all you need to clone this repository:
 git clone https://github.com/claick-oliveira/k8s-custom-metrics
 ```
 
-To deploy this project we use terraform, but if you prefer you can see the commands to create the infrastrcutre in [COMMANDS](COMMANDS.md).
-
 #### Infrastructure
 
 First let's check the architecture that we will create.
