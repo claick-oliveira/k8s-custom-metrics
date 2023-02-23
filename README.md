@@ -247,13 +247,13 @@ terraform destroy
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/claick-oliveira/k8s-gateway-api/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/claick-oliveira/k8s-custom-metrics/blob/main/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## Authors
 
 - **Claick Oliveira** - *Initial work* - [claick-oliveira](https://github.com/claick-oliveira)
 
-See also the list of [contributors](https://github.com/claick-oliveira/k8s-gateway-api/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/claick-oliveira/k8s-custom-metrics/contributors) who participated in this project.
 
 ## License
 
