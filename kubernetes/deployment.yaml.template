@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: subscriber
+  namespace: custom-metrics
+spec:
+  selector:
+    matchLabels:
+      app: subscriber
+  template:
+    metadata:
+      labels:
+        app: subscriber
+    spec:
+      containers:
+      - name: subscriber
+        image: subscriber
+      serviceAccountName: pubsub-sa
+      nodeSelector:
+        iam.gke.io/gke-metadata-server-enabled: "true"
+      env:
+        - name: GOOGLE_CLOUD_PROJECT
+          value: "<PROJECT_ID>"

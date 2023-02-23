@@ -164,5 +164,4 @@ override.tf.json
 terraform.rcl
 
 # manifests
-configconnector.yaml
-enable-pubsub.yaml
+deployment.yaml
