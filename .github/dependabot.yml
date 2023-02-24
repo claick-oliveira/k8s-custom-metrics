@@ -9,7 +9,7 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "docker"
-    directory: "/src/subcriber"
+    directory: "/src/subscriber"
     schedule:
       interval: "weekly"
   - package-ecosystem: "pip"
