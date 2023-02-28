@@ -19,6 +19,7 @@ These instructions will get you a copy of the project up and running on your loc
 - virtualenv
 - vscode
 - skaffold
+- terraform
 - docker
 - minikube
 - kubectl
@@ -140,7 +141,7 @@ kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/k8s-stack
 Ok nice! So, now wee need to create a IAM service account and kubernetes service account to our applications:
 
 ```bash
-gcloud iam service-accounts create GSA_NAME --project=PROJECT_ID
+gcloud iam service-accounts create pubsub-sa --project=PROJECT_ID
 
 gcloud projects add-iam-policy-binding PROJECT_ID \
     --member "serviceAccount:pubsub-sa@PROJECT_ID.iam.gserviceaccount.com" \
