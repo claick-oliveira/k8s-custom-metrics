@@ -19,27 +19,6 @@ resource "google_project_iam_member" "node-service-account-role" {
   project = var.gcp_project_id
 }
 
-resource "google_service_account" "cc-sa" {
-  account_id   = "tf-cc-sa"
-  display_name = "Service Account For Config Connector for GKE ${var.cluster_name}"
-  project      = var.gcp_project_id
-}
-
-resource "google_project_iam_member" "cc-editor-role" {
-  role    = "roles/editor"
-  member  = "serviceAccount:${google_service_account.cc-sa.email}"
-  project = var.gcp_project_id
-}
-
-resource "google_service_account_iam_binding" "cc-admin-account-iam" {
-  service_account_id = google_service_account.cc-sa.name
-  role               = "roles/iam.workloadIdentityUser"
-
-  members = [
-    "serviceAccount:${var.gcp_project_id}.svc.id.goog[cnrm-system/cnrm-controller-manager]",
-  ]
-}
-
 module "gke" {
   source                     = "terraform-google-modules/kubernetes-engine/google"
   project_id                 = var.gcp_project_id
