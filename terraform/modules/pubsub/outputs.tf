@@ -1,8 +1,10 @@
 // pubsub module
 output "pubsub_topic" {
-  value = google_pubsub_topic.example.name
+  description = "The Pub/Sub Topic"
+  value       = google_pubsub_topic.example.name
 }
 
 output "pubsub_subscription" {
-  value = google_pubsub_subscription.example.name
+  description = "The Pub/Sub Subscription"
+  value       = google_pubsub_subscription.example.name
 }
