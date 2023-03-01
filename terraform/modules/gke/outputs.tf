@@ -35,5 +35,5 @@ output "cluster_id" {
 
 output "service_account" {
   description = "The service account to default running nodes as if not overridden in `node_pools`."
-  value       = google_service_account.gke-sa.email
+  value       = google_service_account.gke-custom-metrics-sa.email
 }

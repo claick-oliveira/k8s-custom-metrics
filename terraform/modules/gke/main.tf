@@ -1,21 +1,21 @@
 // gke module
 data "google_client_config" "default" {}
 
-resource "google_service_account" "gke-sa" {
-  account_id   = "tf-gke-sa"
+resource "google_service_account" "gke-custom-metrics-sa" {
+  account_id   = "tf-gke-custom-metrics-sa"
   display_name = "Service Account For GKE ${var.cluster_name}"
   project      = var.gcp_project_id
 }
 
 resource "google_project_iam_member" "artifactregistry-role" {
   role    = "roles/artifactregistry.reader"
-  member  = "serviceAccount:${google_service_account.gke-sa.email}"
+  member  = "serviceAccount:${google_service_account.gke-custom-metrics-sa.email}"
   project = var.gcp_project_id
 }
 
 resource "google_project_iam_member" "node-service-account-role" {
   role    = "roles/container.nodeServiceAccount"
-  member  = "serviceAccount:${google_service_account.gke-sa.email}"
+  member  = "serviceAccount:${google_service_account.gke-custom-metrics-sa.email}"
   project = var.gcp_project_id
 }
 
@@ -59,7 +59,7 @@ module "gke" {
       auto_upgrade            = true
       preemptible             = false
       initial_node_count      = 1
-      service_account         = google_service_account.gke-sa.email
+      service_account         = google_service_account.gke-custom-metrics-sa.email
       config_connector_config = false
     },
   ]

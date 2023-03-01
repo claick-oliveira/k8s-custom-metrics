@@ -15,9 +15,9 @@ resource "time_sleep" "wait_services_enablement" {
 
 module "vpc" {
   source              = "./modules/vpc"
-  vpc_name            = "main-vpc"
-  subnet_name         = "main-us-central1"
-  subnet_name_proxy   = "main-us-central1-proxy"
+  vpc_name            = "custom-metrics-vpc"
+  subnet_name         = "custom-metrics-us-central1"
+  subnet_name_proxy   = "custom-metrics-us-central1-proxy"
   cidr_range          = "10.0.0.0/20"
   cidr_range_proxy    = "10.100.0.0/20"
   cidr_pods           = "172.16.0.0/16"
