@@ -17,7 +17,7 @@ spec:
         image: subscriber
         env:
         - name: GOOGLE_CLOUD_PROJECT
-          value: ""<PROJECT_ID>""
+          value: "<PROJECT_ID>"
       serviceAccountName: pubsub-sa
       nodeSelector:
         iam.gke.io/gke-metadata-server-enabled: "true"

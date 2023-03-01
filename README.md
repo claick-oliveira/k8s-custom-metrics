@@ -206,6 +206,10 @@ To run the applications you need to execute, but you need to be in the root fold
 skaffold run --default-repo us-central1-docker.pkg.dev/<PROJECT_ID>/custom-metrics
 ```
 
+> Before you run this command remeber to create a file deployment.yaml based on the file deployment.yaml.template
+> In this file you need to replace the variable <PROJECT_ID> to your project id
+>
+
 ### The HPA
 
 Now the application publisher will send messages to the Pub/Sub Topic and the application subscriber will read the messages. But the publisher is faster then the publisher and the messages will increse fast. Wait some minutes and create the HPA to increase the number of subscribers:
