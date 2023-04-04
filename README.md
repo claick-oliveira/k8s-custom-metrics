@@ -1,5 +1,7 @@
 # k8s-custom-metrics
 
+[![CodeQL](https://github.com/claick-oliveira/k8s-custom-metrics/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/claick-oliveira/k8s-custom-metrics/actions/workflows/codeql.yml)
+
 This repository is an example how to use custom metrics in GKE. If you want yo read more about it:
 
 - [GKE Custom Metrics](https://cloud.google.com/kubernetes-engine/docs/tutorials/autoscaling-metrics)
