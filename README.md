@@ -1,6 +1,6 @@
 # k8s-custom-metrics
 
-[![CodeQL](https://github.com/claick-oliveira/k8s-custom-metrics/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/claick-oliveira/k8s-custom-metrics/actions/workflows/codeql.yml)
+[![CodeQL](https://github.com/claick-oliveira/k8s-custom-metrics/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/claick-oliveira/k8s-custom-metrics/actions/workflows/codeql.yml) [![](https://github.com/jpoehnelt/in-solidarity-bot/raw/main/static//badge-flat.png)](https://github.com/apps/in-solidarity)
 
 This repository is an example how to use custom metrics in GKE. If you want yo read more about it:
 
