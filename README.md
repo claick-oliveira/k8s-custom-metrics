@@ -115,7 +115,7 @@ gcloud projects add-iam-policy-binding PROJECT_ID \
 
 gcloud iam service-accounts add-iam-policy-binding stackdriver-adapter-sa@PROJECT_ID.iam.gserviceaccount.com \
     --role roles/iam.workloadIdentityUser \
-    --member "serviceAccount:PROJECT_ID.svc.id.goog[custom-metrics/custom-metrics-stackdriver-adapter"
+    --member "serviceAccount:PROJECT_ID.svc.id.goog[custom-metrics/custom-metrics-stackdriver-adapter]"
 ```
 
 > Remeber to replace PROJECT_ID for your project id, example: my-project-111111
